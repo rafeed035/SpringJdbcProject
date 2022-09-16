@@ -1,2 +1,2 @@
 # SpringJdbcProject
-A basic demo shop inventory project using spring jdbc. It is demostrate the basic crud operations.
+A basic demo shop inventory project using spring jdbc. The project will demonstrate the basic crud operations.
