@@ -43,7 +43,7 @@ public class CategoryRepositoryImplementation implements CategoryRepository {
     public Category getCategory(int categoryId) {
         String selectCategoryQuery = "select * from category where category_id = ?";
         RowMapper<Category> rowMapper = new CategoryRowMapper();
-        Category category = jdbcTemplate.queryForObject(selectCategoryQuery, rowMapper);
+        Category category = jdbcTemplate.queryForObject(selectCategoryQuery, rowMapper, categoryId);
         return category;
     }
 

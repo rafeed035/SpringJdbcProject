@@ -2,8 +2,10 @@ package RepositoryImplementation;
 
 import Entity.Brand;
 import Repositories.BrandRepository;
+import RowMapperImplementation.BrandRowMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
 
 import java.util.List;
 
@@ -39,12 +41,17 @@ public class BrandRepositoryImplementation implements BrandRepository {
 
     @Override
     public Brand getBrand(int brandId) {
-
-        return null;
+        String getBrandQuery = "select * from brand where brand_id = ?";
+        RowMapper<Brand> rowMapper = new BrandRowMapper();
+        Brand brand = jdbcTemplate.queryForObject(getBrandQuery,rowMapper, brandId);
+        return brand;
     }
 
     @Override
     public List<Brand> getAllBrands() {
-        return null;
+        String getAllBrandsQuery = "select * from brand";
+        RowMapper<Brand> rowMapper = new BrandRowMapper();
+        List<Brand>brands = jdbcTemplate.query(getAllBrandsQuery, rowMapper);
+        return brands;
     }
 }
