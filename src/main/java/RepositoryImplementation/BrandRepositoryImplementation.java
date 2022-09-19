@@ -15,7 +15,7 @@ public class BrandRepositoryImplementation implements BrandRepository {
 
     @Override
     public int insertBrand(Brand brand) {
-        String insertQuery = "insert into brand(brand_id, brand_name, category_id) values(?, ?, ?)";
+        String insertQuery = "insert into brand(brand_id, brand_name, brand_category_id) values(?, ?, ?)";
         int insertResult = jdbcTemplate.update(insertQuery,
                 brand.getBrandId(),
                 brand.getBrandName(),
