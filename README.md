@@ -45,7 +45,7 @@ Technologies used - Java, Spring Framework, MySQL database.
             on update cascade
      );`
 9. Open the Project file, and go to the class - JdbcConfig.class under the JdbcConfig package.
-10. Find the following bean, and change the **userName** and the **password** to **your MySQL userName and password**
+10. Find the following bean, and change the **userName** and the **password** to **your MySQL userName and password**.
 `    @Bean
     public DriverManagerDataSource getDriverManagerDataSource(){
     DriverManagerDataSource driverManagerDataSource = new DriverManagerDataSource();
