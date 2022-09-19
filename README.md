@@ -54,7 +54,6 @@ Technologies used - Java, Spring Framework, MySQL database.
         driverManagerDataSource.setUrl("jdbc:mysql://localhost:3306/spring_core_db");
         driverManagerDataSource.setUsername("<_Your user name_>");
         driverManagerDataSource.setPassword("<_Your password_>");
-
         return driverManagerDataSource;
     }`
 11. Run the application.
