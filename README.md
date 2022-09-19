@@ -46,13 +46,14 @@ Technologies used - Java, Spring Framework, MySQL database.
      );`
 9. Open the Project file, and go to the class - JdbcConfig.class under the JdbcConfig package.
 10. Find the following bean, and change the **userName** and the **password** to **your MySQL userName and password**.
-`    @Bean
+
+`   @Bean
     public DriverManagerDataSource getDriverManagerDataSource(){
-    DriverManagerDataSource driverManagerDataSource = new DriverManagerDataSource();
-    driverManagerDataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
-    driverManagerDataSource.setUrl("jdbc:mysql://localhost:3306/spring_core_db");
-    driverManagerDataSource.setUsername("<_Your user name_>");
-    driverManagerDataSource.setPassword("<_Your password_>");
+        DriverManagerDataSource driverManagerDataSource = new DriverManagerDataSource();
+        driverManagerDataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
+        driverManagerDataSource.setUrl("jdbc:mysql://localhost:3306/spring_core_db");
+        driverManagerDataSource.setUsername("<_Your user name_>");
+        driverManagerDataSource.setPassword("<_Your password_>");
 
         return driverManagerDataSource;
     }`
