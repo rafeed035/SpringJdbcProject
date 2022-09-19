@@ -11,11 +11,14 @@ Technologies used - Java, Spring Framework, MySQL database.
 4. Create a database and name it - "spring_core_db"
 5. Create the category, brand, and the product table.
 6. To Create the **category** table copy-paste and run the following on the MySQL workbench- 
+
 `     create table category(
             category_id int primary key not null,
             category_name varchar(100) not null
      );`
+     
 7. To create the **brand** table copy-paste and run the following on the MySQL workbench-
+
 `     create table brand(
             brand_id int primary key not null,
             brand_name varchar(100) not null,
@@ -26,7 +29,9 @@ Technologies used - Java, Spring Framework, MySQL database.
             on delete cascade
             on update cascade
      );`
+     
 8. To create the **product** table copy-paste and run the following on the MySQL workbench-
+
 `     create table product(
             product_id int primary key not null,
             product_name varchar(100) not null,
@@ -44,8 +49,10 @@ Technologies used - Java, Spring Framework, MySQL database.
             on delete cascade
             on update cascade
      );`
+     
 9. Open the Project file, and go to the class - JdbcConfig.class under the JdbcConfig package.
 10. Find the following bean, and change the **userName** and the **password** to **your MySQL userName and password**.
+
    _@Bean
     public DriverManagerDataSource getDriverManagerDataSource(){
         DriverManagerDataSource driverManagerDataSource = new DriverManagerDataSource();
@@ -55,4 +62,5 @@ Technologies used - Java, Spring Framework, MySQL database.
         driverManagerDataSource.setPassword("<_Your password_>");
         return driverManagerDataSource;
     }_
+    
 11. Run the application.
