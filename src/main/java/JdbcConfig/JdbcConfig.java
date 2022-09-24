@@ -16,8 +16,8 @@ public class JdbcConfig {
         DriverManagerDataSource driverManagerDataSource = new DriverManagerDataSource();
         driverManagerDataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
         driverManagerDataSource.setUrl("jdbc:mysql://localhost:3306/spring_core_db");
-        driverManagerDataSource.setUsername("root");
-        driverManagerDataSource.setPassword("rafeed2030");
+        driverManagerDataSource.setUsername("<username>");
+        driverManagerDataSource.setPassword("<password>");
 
         return driverManagerDataSource;
     }
